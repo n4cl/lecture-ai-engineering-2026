@@ -34,6 +34,21 @@ app/ask.pyに、API呼び出しからレスポンス取得までの応答時間�
 比較用のシェルスクリプトでは、質問の繰り返し実行とログ保存を自動化した。
 スクリプトはAPI呼び出しが失敗した時点で停止する構成にした。
 
+使用したスクリプトと保存済みログの対応は次のとおり。
+スクリプトの保存先は `lectures/01/experiments/`、ログの保存先は `lectures/01/logs/`。
+
+| スクリプト | 実行内容と結果 | ログのディレクトリ |
+|---|---|---|
+| benchmark_ask.sh | temperature未指定で3.5 Flash-Liteの6回が成功し、続く3.8 Flashの呼び出しが503で停止 | aie01-benchmark.Ay2UA4/ |
+| benchmark_ask_v2.sh | temperature未指定で3.8 Flashを再試行し、503で停止 | aie01-flash.dcLWCT/ |
+| benchmark_ask_v2.sh | モデル指定を3.1 Flash-Liteに変更して実行し、503で停止 | aie01-flash.5zS11B/ |
+| benchmark_temperature.sh | 3.5 Flash-Liteをtemperature=0で2問各3回実行し、全6回が成功 | temperature0.rMRzfT/ |
+
+`benchmark_ask_v2.sh` は途中でモデル指定を変更しており、現在の指定は3.1 Flash-Lite。
+各ログの `[model]` 欄には、実際に使用したモデルが記録されている。
+初期の3ディレクトリのログは、スクリプトが `/tmp` に保存した後、提出用に `lectures/01/logs/` へコピーした。
+実験時のスクリプトは `scripts/` 配下にあり、実験後に現在の場所へ移動し、リポジトリルートへ移動する `cd` 行を修正または追加した。
+
 ### 使用したモデルと生成設定
 
 - gemini-3.5-flash-lite：temperature未指定とtemperature=0
@@ -45,7 +60,8 @@ app/ask.pyに、API呼び出しからレスポンス取得までの応答時間�
 1. LoRAとは何ですか？100文字程度で説明してください。
 2. AIE2026の講座の宿題にある「3レベル」とは何ですか？100文字程度で説明してください。
 
-実験では、各条件で同じ質問を3回ずつ実行した。
+実験では、各条件で同じ質問を3回ずつ実行する計画とし、gemini-3.5-flash-liteでは計12回の計測が成功した。
+ほかのモデルでは503エラーにより、予定した回数の計測を完了できなかった。
 temperature未指定の計測とtemperature=0の計測は、異なる時刻に実施した。
 
 ### 結果
