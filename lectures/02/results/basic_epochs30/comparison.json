@@ -1,0 +1,73 @@
+{
+  "config_diff": {
+    "num_train_epochs": [
+      20,
+      30
+    ]
+  },
+  "comparison": [
+    {
+      "experiment": "basic_epochs10",
+      "epochs": 10,
+      "format_rate": 1.0,
+      "content_rate": 0.8095238095238095,
+      "final_logged_loss": 0.10115675926208496,
+      "training_seconds": 114.12823510169983
+    },
+    {
+      "experiment": "baseline_epochs20",
+      "epochs": 20,
+      "format_rate": 1.0,
+      "content_rate": 0.9047619047619048,
+      "final_logged_loss": 0.013854,
+      "training_seconds": 252.0
+    },
+    {
+      "experiment": "basic_epochs30",
+      "epochs": 30,
+      "format_rate": 1.0,
+      "content_rate": 0.9047619047619048,
+      "final_logged_loss": 0.011606889218091965,
+      "training_seconds": 380.188
+    }
+  ],
+  "diagnostics": [
+    {
+      "label": "baseline_before",
+      "n": 21,
+      "json_readable": 21
+    },
+    {
+      "label": "baseline_after",
+      "n": 21,
+      "json_readable": 21
+    },
+    {
+      "label": "basic_before",
+      "n": 21,
+      "json_readable": 21
+    },
+    {
+      "label": "basic_after",
+      "n": 21,
+      "json_readable": 21
+    }
+  ],
+  "initial_output_differences": [],
+  "changed_answers": [
+    {
+      "question": "成績はいつ出ますか",
+      "baseline": "{\"answer\": \"提出期限は 9 月 30 日 23:59（日本時間）です。\", \"needs_review\": false}",
+      "basic": "{\"answer\": \"課題の提出期限は 9 月 30 日 23:59（日本時間）です。\", \"needs_review\": false}",
+      "baseline_format_content": "True/False",
+      "basic_format_content": "True/False"
+    }
+  ],
+  "baseline_training_source": {
+    "seconds": 252,
+    "seconds_precision": "元ノートブック表示の秒単位の丸め値",
+    "final_logged_loss": 0.013854,
+    "final_logged_step": 40,
+    "loss_source": "元ノートブックのTraining Loss表（表示精度6桁、直近ログ区間の平均）"
+  }
+}
