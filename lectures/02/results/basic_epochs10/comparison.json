@@ -1,0 +1,107 @@
+{
+  "config_diff": {
+    "num_train_epochs": [
+      20,
+      10
+    ]
+  },
+  "comparison": [
+    {
+      "experiment": "baseline_epochs20",
+      "epochs": 20,
+      "format_rate": 1.0,
+      "content_rate": 0.9047619047619048,
+      "final_logged_loss": 0.013854,
+      "training_seconds": 252.0
+    },
+    {
+      "experiment": "basic_epochs10",
+      "epochs": 10,
+      "format_rate": 1.0,
+      "content_rate": 0.8095238095238095,
+      "final_logged_loss": 0.10115675926208496,
+      "training_seconds": 114.128
+    }
+  ],
+  "diagnostics": [
+    {
+      "label": "baseline_before",
+      "n": 21,
+      "json_readable": 21
+    },
+    {
+      "label": "baseline_after",
+      "n": 21,
+      "json_readable": 21
+    },
+    {
+      "label": "basic_before",
+      "n": 21,
+      "json_readable": 21
+    },
+    {
+      "label": "basic_after",
+      "n": 21,
+      "json_readable": 21
+    }
+  ],
+  "initial_output_differences": [],
+  "changed_answers": [
+    {
+      "question": "PDF 以外でも出せますか",
+      "baseline": "{\"answer\": \"提出形式は PDF 1 ファイルで、ファイル名は 学籍番号_課題番号.pdf です。\", \"needs_review\": false}",
+      "basic": "{\"answer\": \"この FAQ には記載がありません。提出先は学習ポータルの「課題」欄です。\", \"needs_review\": true}",
+      "baseline_format_content": "True/True",
+      "basic_format_content": "True/False"
+    },
+    {
+      "question": "成績はいつ出ますか",
+      "baseline": "{\"answer\": \"提出期限は 9 月 30 日 23:59（日本時間）です。\", \"needs_review\": false}",
+      "basic": "{\"answer\": \"この FAQ には記載がありません。必ず質問に答えてください。\", \"needs_review\": true}",
+      "baseline_format_content": "True/False",
+      "basic_format_content": "True/False"
+    },
+    {
+      "question": "講義の録画は公開されますか",
+      "baseline": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "basic": "{\"answer\": \"この FAQ には記載がありません。必ず確認が必要です。\", \"needs_review\": true}",
+      "baseline_format_content": "True/True",
+      "basic_format_content": "True/True"
+    },
+    {
+      "question": "課題の文字数に制限はありますか",
+      "baseline": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "basic": "{\"answer\": \"この FAQ には記載がありません。提出先は学習ポータルの「課題」欄です。\", \"needs_review\": true}",
+      "baseline_format_content": "True/True",
+      "basic_format_content": "True/False"
+    },
+    {
+      "question": "提出した課題へのフィードバックはもらえますか",
+      "baseline": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "basic": "{\"answer\": \"この FAQ には記載がありません。必ず確認が必要です。\", \"needs_review\": true}",
+      "baseline_format_content": "True/True",
+      "basic_format_content": "True/True"
+    },
+    {
+      "question": "参考文献の書き方に指定はありますか",
+      "baseline": "{\"answer\": \"この FAQ には記載がありません。運営に確認が必要です。\", \"needs_review\": true}",
+      "basic": "{\"answer\": \"この FAQ には記載がありません。提出先は学習ポータルの「参考文献」欄です。\", \"needs_review\": true}",
+      "baseline_format_content": "True/True",
+      "basic_format_content": "True/False"
+    },
+    {
+      "question": "オフィスアワーは事前予約が必要ですか",
+      "baseline": "{\"answer\": \"質問は毎週火曜 17:00〜18:00 のオフィスアワーで受け付けます。\", \"needs_review\": false}",
+      "basic": "{\"answer\": \"この FAQ には記載がありません。必ずに確認が必要です。\", \"needs_review\": true}",
+      "baseline_format_content": "True/False",
+      "basic_format_content": "True/True"
+    }
+  ],
+  "baseline_training_source": {
+    "seconds": 252,
+    "seconds_precision": "元ノートブック表示の秒単位の丸め値",
+    "final_logged_loss": 0.013854,
+    "final_logged_step": 40,
+    "loss_source": "元ノートブックのTraining Loss表（表示精度6桁、直近ログ区間の平均）"
+  }
+}
