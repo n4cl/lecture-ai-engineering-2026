@@ -1,0 +1,224 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "instructions": [
+    {
+      "content": "あなたはAIエンジニアリング講座（AIE2026）の学習支援エージェントです。\n- 回の内容を聞かれたら get_lecture_summary を使う。\n- 用語集に見つからないことは、推測で断定せず「用語集にはない」と伝える。\n- 回答の最後に、関係する回（第N回）を示す。\n- 宿題の答えそのものは書かず、考え方のヒントで導く。",
+      "dynamic": false,
+      "name": null,
+      "id": {
+        "source": {},
+        "name": null
+      },
+      "part_kind": "instruction"
+    }
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "LoRAとQLoRAの違いは？",
+          "timestamp": "2026-11-03T13:40:42.885645Z",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "timestamp": "2026-11-03T13:40:42.885871Z",
+      "instructions": "あなたはAIエンジニアリング講座（AIE2026）の学習支援エージェントです。\n- 回の内容を聞かれたら get_lecture_summary を使う。\n- 用語集に見つからないことは、推測で断定せず「用語集にはない」と伝える。\n- 回答の最後に、関係する回（第N回）を示す。\n- 宿題の答えそのものは書かず、考え方のヒントで導く。",
+      "kind": "request",
+      "run_id": "01a1a1a4-02fe-71c5-ba97-b4e0785b34d1",
+      "conversation_id": "01a1a1a4-02fe-71c5-ba97-b4e148741e84",
+      "metadata": null,
+      "state": "complete"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_glossary",
+          "args": {
+            "query": "LoRA"
+          },
+          "tool_call_id": "call_800695",
+          "tool_kind": null,
+          "id": null,
+          "provider_name": "google",
+          "provider_details": {
+            "thought_signature": "EmAKXgFpFH0TIdIjbq7qB+NfRNblGYa8T6fF8I2yHQwjwYzv+DPZRkGYJ6vX0Y3KJlsokvUnEOC2DHo6aWiCyn4qULh+wsze6YvQO6e2Z64iulE0Bpx5HYCxzWjGfipooqo="
+          },
+          "part_kind": "tool-call"
+        },
+        {
+          "tool_name": "search_glossary",
+          "args": {
+            "query": "QLoRA"
+          },
+          "tool_call_id": "call_800696",
+          "tool_kind": null,
+          "id": null,
+          "provider_name": null,
+          "provider_details": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 338,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 37,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "audio_seconds": 0.0,
+        "details": {
+          "text_prompt_tokens": 338
+        },
+        "cost": "0.0001939",
+        "input_text_tokens": 338
+      },
+      "model_name": "gemini-3.5-flash-lite",
+      "timestamp": "2026-11-03T13:40:43.809209Z",
+      "kind": "response",
+      "provider_name": "google",
+      "provider_url": "https://generativelanguage.googleapis.com/",
+      "provider_details": {
+        "finish_reason": "STOP",
+        "service_tier": "standard"
+      },
+      "provider_response_id": "W-Tpaq2-DJXKrfcP3LPN4Ao",
+      "finish_reason": "stop",
+      "run_id": "01a1a1a4-02fe-71c5-ba97-b4e0785b34d1",
+      "conversation_id": "01a1a1a4-02fe-71c5-ba97-b4e148741e84",
+      "metadata": null,
+      "workspace_ref": null,
+      "failed_attempts": null,
+      "state": "complete"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_glossary",
+          "content": "[{\"term\": \"LoRA\", \"lecture\": 2, \"definition\": \"事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。\", \"related\": [\"peft\", \"lora-rank\", \"qlora\"]}, {\"term\": \"ランク（LoRAのr）\", \"lecture\": 2, \"definition\": \"LoRAで使う低ランク行列の大きさを決めるハイパーパラメータ。大きいほど表現力が上がるが、学習するパラメータとメモリも増える。\", \"related\": [\"lora\"]}, {\"term\": \"QLoRA\", \"lecture\": 2, \"definition\": \"ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。\", \"related\": [\"lora\", \"quantization\"]}]",
+          "tool_call_id": "call_800695",
+          "tool_kind": null,
+          "metadata": null,
+          "timestamp": "2026-11-03T13:40:43.817446Z",
+          "outcome": "success",
+          "part_kind": "tool-return"
+        },
+        {
+          "tool_name": "search_glossary",
+          "content": "[{\"term\": \"QLoRA\", \"lecture\": 2, \"definition\": \"ベースモデルの重みを4ビットなどに量子化してメモリを節約したうえで、LoRAで学習する手法。より大きなモデルを小さなGPUで扱える。本講座の第2回演習ではモデルがGPUに載るためLoRAで学習し、4ビットで読み込んだときのメモリと出力の違いを発展で比べる。\", \"related\": [\"lora\", \"quantization\"]}, {\"term\": \"LoRA\", \"lecture\": 2, \"definition\": \"事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。\", \"related\": [\"peft\", \"lora-rank\", \"qlora\"]}]",
+          "tool_call_id": "call_800696",
+          "tool_kind": null,
+          "metadata": null,
+          "timestamp": "2026-11-03T13:40:43.817988Z",
+          "outcome": "success",
+          "part_kind": "tool-return"
+        }
+      ],
+      "timestamp": "2026-11-03T13:40:43.818725Z",
+      "instructions": "あなたはAIエンジニアリング講座（AIE2026）の学習支援エージェントです。\n- 回の内容を聞かれたら get_lecture_summary を使う。\n- 用語集に見つからないことは、推測で断定せず「用語集にはない」と伝える。\n- 回答の最後に、関係する回（第N回）を示す。\n- 宿題の答えそのものは書かず、考え方のヒントで導く。",
+      "kind": "request",
+      "run_id": "01a1a1a4-02fe-71c5-ba97-b4e0785b34d1",
+      "conversation_id": "01a1a1a4-02fe-71c5-ba97-b4e148741e84",
+      "metadata": null,
+      "state": "complete"
+    }
+  ],
+  "tools": [
+    {
+      "name": "search_glossary",
+      "parameters_json_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "type": "object"
+      },
+      "description": "講座の用語集から用語を検索し、定義と、どの回で扱うかを返す。\n\nquery には調べたい用語を1つだけ入れる（例: \"LoRA\"）。",
+      "outer_typed_dict_key": null,
+      "strict": null,
+      "sequential": false,
+      "kind": "function",
+      "metadata": null,
+      "timeout": null,
+      "defer_loading": false,
+      "unless_native": null,
+      "with_native": null,
+      "tool_kind": null,
+      "return_schema": {
+        "type": "string"
+      },
+      "include_return_schema": null,
+      "toolset_id": "<agent>",
+      "capability_id": null
+    },
+    {
+      "name": "get_lecture_summary",
+      "parameters_json_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "lecture": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "lecture"
+        ],
+        "type": "object"
+      },
+      "description": "指定した回（1始まりの整数）の講義の要点を返す。\n\n「第3回では何を学ぶ？」のように、回の内容や関係を聞かれたときに使う。",
+      "outer_typed_dict_key": null,
+      "strict": null,
+      "sequential": false,
+      "kind": "function",
+      "metadata": null,
+      "timeout": null,
+      "defer_loading": false,
+      "unless_native": null,
+      "with_native": null,
+      "tool_kind": null,
+      "return_schema": {
+        "type": "string"
+      },
+      "include_return_schema": null,
+      "toolset_id": "<agent>",
+      "capability_id": null
+    },
+    {
+      "name": "make_quiz",
+      "parameters_json_schema": {
+        "additionalProperties": false,
+        "properties": {
+          "lecture": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "lecture"
+        ],
+        "type": "object"
+      },
+      "description": "指定した回の用語から、確認問題と答えを1つ返す。\n\n「第2回の確認問題を出して」のように、\n復習用の問題を求められたときに使う。",
+      "outer_typed_dict_key": null,
+      "strict": null,
+      "sequential": false,
+      "kind": "function",
+      "metadata": null,
+      "timeout": null,
+      "defer_loading": false,
+      "unless_native": null,
+      "with_native": null,
+      "tool_kind": null,
+      "return_schema": {
+        "type": "string"
+      },
+      "include_return_schema": null,
+      "toolset_id": "<agent>",
+      "capability_id": null
+    }
+  ]
+}

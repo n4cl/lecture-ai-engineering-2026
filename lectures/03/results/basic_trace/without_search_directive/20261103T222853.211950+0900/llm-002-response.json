@@ -1,0 +1,45 @@
+{
+  "parts": [
+    {
+      "content": "講座の用語集によると、LoRAとQLoRAの違いは以下の通りです。\n\n* **LoRA**\n  事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列（低ランク行列）の積で表し、その小さな行列だけを学習するPEFT手法です。学習パラメータが少なく、アダプタのファイルサイズも小さく抑えられます。\n* **QLoRA**\n  ベースモデルの重みを4ビットなどに**量子化**してメモリを大幅に節約したうえで、LoRAを適用して学習する手法です。これにより、より大きなモデルを比較的小さなGPUでも扱えるようになります。\n\n関係する回：第2回",
+      "id": null,
+      "provider_name": "google",
+      "provider_details": {
+        "thought_signature": "EmAKXgFpFH0Tbh9ezfaenuDO13gInyO4X3nj40/koB9B5OWo3YACDFw5X8lsi/1TcSiw9srGI9l7y4o5/RtFSD3u0qlY6HQ1sCSJ3Eu5rxD0Esu6w6IfmGR+jU3kEZ7uplg="
+      },
+      "part_kind": "text"
+    }
+  ],
+  "usage": {
+    "input_tokens": 898,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 154,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "audio_seconds": 0.0,
+    "details": {
+      "text_prompt_tokens": 898
+    },
+    "cost": "0.0006544",
+    "input_text_tokens": 898
+  },
+  "model_name": "gemini-3.5-flash-lite",
+  "timestamp": "2026-11-03T13:28:57.010128Z",
+  "kind": "response",
+  "provider_name": "google",
+  "provider_url": "https://generativelanguage.googleapis.com/",
+  "provider_details": {
+    "finish_reason": "STOP",
+    "service_tier": "standard"
+  },
+  "provider_response_id": "l-HpaoK0Nr-C2roPsZSkyQo",
+  "finish_reason": "stop",
+  "run_id": null,
+  "conversation_id": null,
+  "metadata": null,
+  "workspace_ref": null,
+  "failed_attempts": null,
+  "state": "complete"
+}

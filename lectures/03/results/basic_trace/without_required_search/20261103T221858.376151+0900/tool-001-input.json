@@ -1,0 +1,8 @@
+{
+  "name": "search_glossary",
+  "tool_call_id": "call_1122518",
+  "parent": "llm-001",
+  "arguments": {
+    "query": "LoRA"
+  }
+}
