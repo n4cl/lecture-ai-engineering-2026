@@ -1,0 +1,25 @@
+{
+  "status": "ok",
+  "duration_ms": 3566.4060842245817,
+  "model_calls": 2,
+  "tool_calls": 2,
+  "usage": {
+    "input_tokens": 1296,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 168,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "audio_seconds": 0.0,
+    "details": {
+      "text_prompt_tokens": 1296
+    },
+    "cost": "0.0008088",
+    "requests": 2,
+    "tool_calls": 2,
+    "input_text_tokens": 1296
+  },
+  "output": "LoRAとQLoRAの主な違いは、**ベースモデルの重みの量子化（ビット数の削減）を行うかどうか**です。\n\n* **LoRA**: 事前学習済みの重みは固定したまま、重みの更新分（低ランク行列）だけを学習することでパラメータ数とメモリを削減する手法です。\n* **QLoRA**: LoRAの仕組みに加え、ベースモデルの重みを4ビットなどに量子化（圧縮）して読み込むことで、さらにGPUメモリの消費量を大幅に抑え、より大きなモデルを小さなGPUでも学習できるようにした手法です。\n\n（第2回）",
+  "error_type": null
+}

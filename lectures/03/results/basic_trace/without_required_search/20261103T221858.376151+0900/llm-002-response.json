@@ -1,0 +1,45 @@
+{
+  "parts": [
+    {
+      "content": "LoRAとQLoRAの違いは以下の通りです。\n\n* **LoRA**: 事前学習済みの重みを固定したまま、重みの更新分（低ランク行列）だけを学習することで、学習するパラメータ数を減らす手法です。\n* **QLoRA**: LoRAの仕組みに加え、ベースモデルの重みを4ビットなどに量子化（軽量化）してメモリ消費を大幅に抑えながら学習する手法です。これにより、より大きなモデルを比較的小さなGPUで扱えるようになります。\n\n第2回",
+      "id": null,
+      "provider_name": "google",
+      "provider_details": {
+        "thought_signature": "EmAKXgFpFH0Tr6YLWX3mDCdxUfbYJ68gnsE1jR/jW0fRW2pNyKc9smJ1WEgdcF8CSkJTthf/BUGqAeSLgnSVdT8wS658On0gfH9I8JbpL5XiiyqDZp2LH+efQfvvukS/qls="
+      },
+      "part_kind": "text"
+    }
+  ],
+  "usage": {
+    "input_tokens": 928,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 114,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "audio_seconds": 0.0,
+    "details": {
+      "text_prompt_tokens": 928
+    },
+    "cost": "0.0005634",
+    "input_text_tokens": 928
+  },
+  "model_name": "gemini-3.5-flash-lite",
+  "timestamp": "2026-11-03T13:19:00.427041Z",
+  "kind": "response",
+  "provider_name": "google",
+  "provider_url": "https://generativelanguage.googleapis.com/",
+  "provider_details": {
+    "finish_reason": "STOP",
+    "service_tier": "standard"
+  },
+  "provider_response_id": "Q9_pauG1H4Ox0-kPq-Kf2Qc",
+  "finish_reason": "stop",
+  "run_id": null,
+  "conversation_id": null,
+  "metadata": null,
+  "workspace_ref": null,
+  "failed_attempts": null,
+  "state": "complete"
+}

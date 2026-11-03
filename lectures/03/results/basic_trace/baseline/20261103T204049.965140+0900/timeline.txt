@@ -1,0 +1,10 @@
+     0.014ms  run.start    run
+    10.156ms  llm.start    llm-001
+   860.694ms  llm.end      llm-001  848.225ms
+   862.962ms  tool.start   tool-001  search_glossary
+   863.714ms  tool.start   tool-002  search_glossary
+   866.455ms  tool.end     tool-001  search_glossary  2.860ms
+   867.008ms  tool.end     tool-002  search_glossary  2.871ms
+   868.770ms  llm.start    llm-002
+  2424.518ms  llm.end      llm-002  1554.980ms
+  2430.445ms  run.end      run
