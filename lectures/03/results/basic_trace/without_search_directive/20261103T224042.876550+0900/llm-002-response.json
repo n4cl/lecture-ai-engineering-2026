@@ -1,0 +1,45 @@
+{
+  "parts": [
+    {
+      "content": "LoRAとQLoRAの主な違いは、**ベースモデルの重みの量子化（ビット数を減らすこと）を行うかどうか**です。\n\n* **LoRA**: 事前学習済みの重みは固定したまま、重みの更新分を小さな低ランク行列（アダプタ）として追加し、その部分だけを学習する手法です。\n* **QLoRA**: LoRAの仕組みをベースにしつつ、ベースモデルの重みを4ビットなどに**量子化**してメモリを大幅に節約した状態で学習を行う手法です。これにより、より小さなGPUでも大きなモデルを扱えるようになります。\n\n関係する回：第2回",
+      "id": null,
+      "provider_name": "google",
+      "provider_details": {
+        "thought_signature": "EmAKXgFpFH0TPn5ZEUsw2d2DuZnL706Mdqam4H3yhb7l1vF1Z7+HtYiOxVqtYQtby0gEuD06kyDUD8pYUSZWUmPOGA3XbpCNHnIw4WnW3yWyelX5w514/eCFfqMdYhNrULo="
+      },
+      "part_kind": "text"
+    }
+  ],
+  "usage": {
+    "input_tokens": 898,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 140,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "audio_seconds": 0.0,
+    "details": {
+      "text_prompt_tokens": 898
+    },
+    "cost": "0.0006194",
+    "input_text_tokens": 898
+  },
+  "model_name": "gemini-3.5-flash-lite",
+  "timestamp": "2026-11-03T13:40:57.413364Z",
+  "kind": "response",
+  "provider_name": "google",
+  "provider_url": "https://generativelanguage.googleapis.com/",
+  "provider_details": {
+    "finish_reason": "STOP",
+    "service_tier": "standard"
+  },
+  "provider_response_id": "XOTpataBAZ7G0-kP__qLgQc",
+  "finish_reason": "stop",
+  "run_id": null,
+  "conversation_id": null,
+  "metadata": null,
+  "workspace_ref": null,
+  "failed_attempts": null,
+  "state": "complete"
+}

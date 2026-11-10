@@ -1,0 +1,10 @@
+{"timestamp": "2026-11-03T22:18:58.376+09:00", "elapsed_ms": 0.017, "event": "run.start", "span": "run"}
+{"timestamp": "2026-11-03T22:18:58.385+09:00", "elapsed_ms": 8.823, "event": "llm.start", "span": "llm-001", "request": "llm-001-request.json"}
+{"timestamp": "2026-11-03T22:18:59.294+09:00", "elapsed_ms": 918.617, "event": "llm.end", "span": "llm-001", "duration_ms": 907.0553332567215, "response": "llm-001-response.json"}
+{"timestamp": "2026-11-03T22:18:59.297+09:00", "elapsed_ms": 920.824, "event": "tool.start", "span": "tool-001", "name": "search_glossary", "parent": "llm-001", "tool_call_id": "call_1122518", "input": "tool-001-input.json"}
+{"timestamp": "2026-11-03T22:18:59.297+09:00", "elapsed_ms": 921.376, "event": "tool.start", "span": "tool-002", "name": "search_glossary", "parent": "llm-001", "tool_call_id": "call_1122519", "input": "tool-002-input.json"}
+{"timestamp": "2026-11-03T22:18:59.300+09:00", "elapsed_ms": 924.467, "event": "tool.end", "span": "tool-001", "duration_ms": 3.215581178665161, "name": "search_glossary", "output": "tool-001-output.json"}
+{"timestamp": "2026-11-03T22:18:59.301+09:00", "elapsed_ms": 925.539, "event": "tool.end", "span": "tool-002", "duration_ms": 2.9599983245134354, "name": "search_glossary", "output": "tool-002-output.json"}
+{"timestamp": "2026-11-03T22:18:59.304+09:00", "elapsed_ms": 928.206, "event": "llm.start", "span": "llm-002", "request": "llm-002-request.json"}
+{"timestamp": "2026-11-03T22:19:00.427+09:00", "elapsed_ms": 2051.358, "event": "llm.end", "span": "llm-002", "duration_ms": 1122.1244167536497, "response": "llm-002-response.json"}
+{"timestamp": "2026-11-03T22:19:00.430+09:00", "elapsed_ms": 2053.907, "event": "run.end", "span": "run"}

@@ -1,0 +1,25 @@
+{
+  "status": "ok",
+  "duration_ms": 2024.625500664115,
+  "model_calls": 2,
+  "tool_calls": 2,
+  "usage": {
+    "input_tokens": 1296,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 156,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "audio_seconds": 0.0,
+    "details": {
+      "text_prompt_tokens": 1296
+    },
+    "cost": "0.0007788",
+    "requests": 2,
+    "tool_calls": 2,
+    "input_text_tokens": 1296
+  },
+  "output": "LoRAとQLoRAの違いは以下のとおりです。\n\n* **LoRA**: 事前学習済みの重みはそのまま固定し、重みの更新分を表す小さな低ランク行列（アダプタ）だけを学習することで、効率的に微調整を行うPEFT手法です。\n* **QLoRA**: ベースモデルの重みを4ビットなどに量子化（軽量化）してメモリ消費を大幅に抑えたうえで、LoRAによる学習を行う手法です。これにより、より大きなモデルを小さなGPU環境でも扱えるようになります。\n\n第2回",
+  "error_type": null
+}

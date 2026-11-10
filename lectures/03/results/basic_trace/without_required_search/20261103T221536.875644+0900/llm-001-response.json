@@ -1,0 +1,62 @@
+{
+  "parts": [
+    {
+      "tool_name": "search_glossary",
+      "args": {
+        "query": "LoRA"
+      },
+      "tool_call_id": "call_1139417",
+      "tool_kind": null,
+      "id": null,
+      "provider_name": "google",
+      "provider_details": {
+        "thought_signature": "EmAKXgFpFH0TYyFzM5Nk8egkjz2H1OirjHmoTr9dIQQ/CK9vE1THUTe2kXITVxKcGmhoG10IPknzOb7jJUQ1rjafI251Gvkw96vVVLw+GF0TYu3pMlnOB+mYxTwdorCLZfc="
+      },
+      "part_kind": "tool-call"
+    },
+    {
+      "tool_name": "search_glossary",
+      "args": {
+        "query": "QLoRA"
+      },
+      "tool_call_id": "call_1139418",
+      "tool_kind": null,
+      "id": null,
+      "provider_name": null,
+      "provider_details": null,
+      "part_kind": "tool-call"
+    }
+  ],
+  "usage": {
+    "input_tokens": 368,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 37,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "audio_seconds": 0.0,
+    "details": {
+      "text_prompt_tokens": 368
+    },
+    "cost": "0.0002029",
+    "input_text_tokens": 368
+  },
+  "model_name": "gemini-3.5-flash-lite",
+  "timestamp": "2026-11-03T13:15:37.893222Z",
+  "kind": "response",
+  "provider_name": "google",
+  "provider_url": "https://generativelanguage.googleapis.com/",
+  "provider_details": {
+    "finish_reason": "STOP",
+    "service_tier": "standard"
+  },
+  "provider_response_id": "ed7pau6gD7PLrfcPjrH20AQ",
+  "finish_reason": "stop",
+  "run_id": null,
+  "conversation_id": null,
+  "metadata": null,
+  "workspace_ref": null,
+  "failed_attempts": null,
+  "state": "complete"
+}

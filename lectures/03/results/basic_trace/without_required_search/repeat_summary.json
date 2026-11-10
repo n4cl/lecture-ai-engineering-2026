@@ -1,0 +1,94 @@
+[
+  {
+    "directory": "20261103T221536.875644+0900",
+    "model": "gemini-3.5-flash-lite",
+    "requests": 2,
+    "tool_calls": 2,
+    "calls": [
+      {
+        "name": "search_glossary",
+        "arguments": {
+          "query": "LoRA"
+        }
+      },
+      {
+        "name": "search_glossary",
+        "arguments": {
+          "query": "QLoRA"
+        }
+      }
+    ],
+    "seconds": 2.025,
+    "output_tokens": 156,
+    "output": "LoRAとQLoRAの違いは以下のとおりです。\n\n* **LoRA**: 事前学習済みの重みはそのまま固定し、重みの更新分を表す小さな低ランク行列（アダプタ）だけを学習することで、効率的に微調整を行うPEFT手法です。\n* **QLoRA**: ベースモデルの重みを4ビットなどに量子化（軽量化）してメモリ消費を大幅に抑えたうえで、LoRAによる学習を行う手法です。これにより、より大きなモデルを小さなGPU環境でも扱えるようになります。\n\n第2回"
+  },
+  {
+    "directory": "20261103T221849.961365+0900",
+    "model": "gemini-3.5-flash-lite",
+    "requests": 2,
+    "tool_calls": 2,
+    "calls": [
+      {
+        "name": "search_glossary",
+        "arguments": {
+          "query": "LoRA"
+        }
+      },
+      {
+        "name": "search_glossary",
+        "arguments": {
+          "query": "QLoRA"
+        }
+      }
+    ],
+    "seconds": 3.566,
+    "output_tokens": 168,
+    "output": "LoRAとQLoRAの主な違いは、**ベースモデルの重みの量子化（ビット数の削減）を行うかどうか**です。\n\n* **LoRA**: 事前学習済みの重みは固定したまま、重みの更新分（低ランク行列）だけを学習することでパラメータ数とメモリを削減する手法です。\n* **QLoRA**: LoRAの仕組みに加え、ベースモデルの重みを4ビットなどに量子化（圧縮）して読み込むことで、さらにGPUメモリの消費量を大幅に抑え、より大きなモデルを小さなGPUでも学習できるようにした手法です。\n\n（第2回）"
+  },
+  {
+    "directory": "20261103T221854.938167+0900",
+    "model": "gemini-3.5-flash-lite",
+    "requests": 2,
+    "tool_calls": 2,
+    "calls": [
+      {
+        "name": "search_glossary",
+        "arguments": {
+          "query": "LoRA"
+        }
+      },
+      {
+        "name": "search_glossary",
+        "arguments": {
+          "query": "QLoRA"
+        }
+      }
+    ],
+    "seconds": 2.218,
+    "output_tokens": 219,
+    "output": "**LoRA**と**QLoRA**の主な違いは、ベースモデルの重みを量子化するかどうか、そして必要なメモリ量にあります。\n\n* **LoRA（Low-Rank Adaptation）**\n  事前学習済みの重みは固定したまま、重みの更新分を小さな低ランク行列（2つの小さな行列の積）で表し、その小さな部分だけを学習するPEFT（Parameter-Efficient Fine-Tuning）手法です。学習パラメータや保存ファイルを大幅に削減できます。\n\n* **QLoRA（Quantized LoRA）**\n  ベースモデルの重みを**4ビットなどに量子化（Quantization）してメモリをさらに節約**した状態で、LoRAによる学習を行う手法です。これにより、より大きなモデルを小さなGPU環境でも扱えるようになります。\n\n---\n関連する回：第2回"
+  },
+  {
+    "directory": "20261103T221858.376151+0900",
+    "model": "gemini-3.5-flash-lite",
+    "requests": 2,
+    "tool_calls": 2,
+    "calls": [
+      {
+        "name": "search_glossary",
+        "arguments": {
+          "query": "LoRA"
+        }
+      },
+      {
+        "name": "search_glossary",
+        "arguments": {
+          "query": "QLoRA"
+        }
+      }
+    ],
+    "seconds": 2.052,
+    "output_tokens": 151,
+    "output": "LoRAとQLoRAの違いは以下の通りです。\n\n* **LoRA**: 事前学習済みの重みを固定したまま、重みの更新分（低ランク行列）だけを学習することで、学習するパラメータ数を減らす手法です。\n* **QLoRA**: LoRAの仕組みに加え、ベースモデルの重みを4ビットなどに量子化（軽量化）してメモリ消費を大幅に抑えながら学習する手法です。これにより、より大きなモデルを比較的小さなGPUで扱えるようになります。\n\n第2回"
+  }
+]
